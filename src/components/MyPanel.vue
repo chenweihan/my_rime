@@ -149,6 +149,7 @@ async function analyze (result: RIME_RESULT, rimeKey: string) {
     preEditBody.value = result.body
     preEditTail.value = result.tail
     highlighted.value = result.highlighted
+    // @ts-ignore
     menuOptions.value = result.candidates.map((candidate, i) => {
       let label = `${result.selectLabels?.[i] || i + 1} ${candidate.text}`
       if (candidate.comment && (hideComment.value === false || (hideComment.value === 'emoji' && !isEmoji(candidate.text)))) {

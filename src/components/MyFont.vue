@@ -54,7 +54,9 @@ async function loadFont (fontFamily: string) {
   const fontFaces: string[] = []
   for (let i = 0; i < files.length; ++i) {
     const file = files[i]
+     // @ts-ignore
     const url = (
+       // @ts-ignore
       '__LIBRESERVICE_CDN__' // eslint-disable-line no-constant-condition
         ? `https://cdn.jsdelivr.net/npm/@libreservice/font-collection@${version}/dist/`
         : './'

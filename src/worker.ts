@@ -11,6 +11,7 @@ const RIME_USER = '/rime'
 const RIME_SHARED = '/usr/share/rime-data'
 
 function getURL (target: string, name: string) {
+   // @ts-ignore
   if ('__RIME_CDN__') { // eslint-disable-line no-constant-condition
     return '__RIME_CDN__' + `${target}@${(targetVersion as {[key: string]: string})[target]}/${name}`
   }

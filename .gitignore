@@ -32,6 +32,10 @@ public/rime.data
 public/ime
 *.out.js
 build
+boost
+librime
+librime-lua
+lua
 
 *.js.map
 public/worker.js
