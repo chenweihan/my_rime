@@ -8,6 +8,8 @@ import emojiRegex from 'emoji-regex'
 import {
   process,
   changePage,
+  clearComposition,
+  setInput,
   selectCandidateOnCurrentPage
 } from '../workerAPI'
 import {
@@ -186,7 +188,10 @@ async function analyze (result: RIME_RESULT, rimeKey: string) {
 }
 
 async function input (rimeKey: string) {
-  const result = await process(rimeKey)
+  console.log('input', rimeKey);
+  await setInput();
+  const result = await process(rimeKey);
+  console.log('result', result);
   return analyze(result, rimeKey)
 }
 

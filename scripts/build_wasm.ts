@@ -29,7 +29,8 @@ const exportedFunctions = [
   'select_candidate_on_current_page',
   'change_page',
   'deploy',
-  'reset'
+  'reset',
+  'set_input'
 ]
 
 const compileArgs = [

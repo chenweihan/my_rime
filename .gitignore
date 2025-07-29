@@ -36,7 +36,6 @@ boost
 librime
 librime-lua
 lua
-
 *.js.map
 public/worker.js
 .vercel

@@ -10,6 +10,7 @@ const process: (input: string) => Promise<RIME_RESULT> = worker.register('proces
 const selectCandidateOnCurrentPage: (index: number) => Promise<string> = worker.register('selectCandidateOnCurrentPage')
 const changePage: (backward: boolean) => Promise<string> = worker.register('changePage')
 const resetUserDirectory: () => Promise<void> = worker.register('resetUserDirectory')
+const setInput: () => Promise<void> = worker.register('setInput')
 const FS = asyncFS(worker)
 
 export {
@@ -22,5 +23,6 @@ export {
   process,
   selectCandidateOnCurrentPage,
   changePage,
-  setIME
+  setIME,
+  setInput
 }

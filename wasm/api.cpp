@@ -203,6 +203,10 @@ void reset() {
   deployed = false;
   stop_rime();
 }
+
+void set_input() {
+  api->set_input(session_id, "");
+}
 }
 
 } // namespace my_rime
